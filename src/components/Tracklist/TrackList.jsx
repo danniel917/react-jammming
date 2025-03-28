@@ -1,6 +1,6 @@
 import React from "react";
 
-const TrackList = ({ name, artist, album}) => {
+const TrackList = ({ name, artist, album }) => {
   return (
     <>
       <div>
