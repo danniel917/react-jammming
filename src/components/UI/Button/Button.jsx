@@ -1,7 +1,8 @@
 import React from "react";
 
-const Button = () => {
-  return <div>Button</div>;
+const Button = (props) => {
+  const { text, onClick } = props;
+  return <button onClick={onClick}>{text}</button>;
 };
 
 export { Button };
