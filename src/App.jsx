@@ -39,7 +39,7 @@ function App() {
           }}
         >
           <h2 style={{ marginBottom: "1rem" }}>Playlists</h2>
-          <PlayList playlist={playlist} />
+          <PlayList playlist={playlist} setPlaylist={setPlaylist} />
         </div>
       </div>
     </>
