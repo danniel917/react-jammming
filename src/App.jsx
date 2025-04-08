@@ -38,7 +38,7 @@ function App() {
             borderRadius: "1rem",
           }}
         >
-          <h2 style={{ marginBottom: "1rem" }}>Playlists</h2>
+          <h2 style={{ marginBottom: "1rem" }}>Your Playlist</h2>
           <PlayList playlist={playlist} setPlaylist={setPlaylist} />
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { Button } from "../UI/Button/Button";
+import { Input } from "../UI/Input/Input";
 
 const SearchBar = ({ setTracklist }) => {
   const [search, setSearch] = useState("");
@@ -20,7 +21,11 @@ const SearchBar = ({ setTracklist }) => {
           marginBottom: "2rem",
         }}
       >
-        <input
+        <div>
+        <label htmlFor="search" style={{ fontSize: "14px", display: "block" }}>
+          Search for a song, artist or album
+        </label>
+        <Input
           type="text"
           name="search"
           id="search"
@@ -29,6 +34,7 @@ const SearchBar = ({ setTracklist }) => {
           onChange={({ target }) => setSearch(target.value)}
         />
         <Button text="Search" onClick={handleTracklistResults} />
+        </div>
       </div>
     </>
   );
