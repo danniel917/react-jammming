@@ -1,14 +1,15 @@
 import { React, useState } from "react";
 import { Button } from "../UI/Button/Button";
 import { Input } from "../UI/Input/Input";
+import Spotify from '../../utils/spotify';
 
-const SearchBar = ({ setTracklist }) => {
+const SearchBar = () => {
   const [search, setSearch] = useState("");
 
-  const handleTracklistResults = () => {
-    let newTracklist;
-    setTracklist(newTracklist);
-  };
+  async function handleSearch() {
+    const tracks = await Spotify.search(search);
+    // setResults(tracks);
+  }
 
   return (
     <>
@@ -33,7 +34,7 @@ const SearchBar = ({ setTracklist }) => {
           placeholder="Search"
           onChange={({ target }) => setSearch(target.value)}
         />
-        <Button text="Search" onClick={handleTracklistResults} />
+        <Button text="Search" onClick={handleSearch} />
         </div>
       </div>
     </>
